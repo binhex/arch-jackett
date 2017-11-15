@@ -16,6 +16,7 @@ docker run -d \
     -p 9117:9117 \
     --name=<container name> \
     -v <path for config files>:/config \
+    -v <path for data files>:/data \
     -v /etc/localtime:/etc/localtime:ro \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
@@ -35,6 +36,7 @@ docker run -d \
     -p 9117:9117 \
     --name=jackett \
     -v /apps/docker/jackett:/config \
+    -v /apps/docker/sabnzbd/watched:/data \
     -v /etc/localtime:/etc/localtime:ro \
     -e UMASK=000 \
     -e PUID=0 \
