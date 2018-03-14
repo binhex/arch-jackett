@@ -50,8 +50,8 @@ source /root/aur.sh
 # create file with contets of here doc
 cat <<'EOF' > /tmp/permissions_heredoc
 # set permissions inside container
-chown -R "${PUID}":"${PGID}" /usr/share/Jackett /opt/Jackett /home/nobody
-chmod -R 775 /usr/share/Jackett /opt/Jackett /home/nobody
+chown -R "${PUID}":"${PGID}" /usr/lib/jackett/ /var/lib/jackett/ /home/nobody
+chmod -R 775 /usr/lib/jackett/ /var/lib/jackett/ /home/nobody
 
 EOF
 
