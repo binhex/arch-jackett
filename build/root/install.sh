@@ -48,7 +48,7 @@ source /root/aur.sh
 ####
 
 # define comma separated list of paths 
-install_paths="/usr/lib/jackett,/var/lib/jackett,/home/nobody"
+install_paths="/usr/lib/jackett,/home/nobody"
 
 # split comma separated string into list for install paths
 IFS=',' read -ra install_paths_list <<< "${install_paths}"
