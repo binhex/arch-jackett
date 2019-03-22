@@ -15,20 +15,11 @@ unzip /tmp/scripts-master.zip -d /tmp
 # move shell scripts to /root
 mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 
-# archive packages
-####
-
-# define archive packages
-arc_packages="mono~5.14.0.177-1-x86_64"
-
-# call arc script (arch archive repo)
-source /root/arc.sh
-
 # pacman packages
 ####
 
 # define pacman packages
-pacman_packages=""
+pacman_packages="openssl-1.0"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
