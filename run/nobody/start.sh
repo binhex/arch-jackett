@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # run jackett using .net core
-/usr/lib/jackett/jackett --NoRestart --NoUpdates --DataFolder /config
+/usr/lib/jackett/jackett --NoRestart --NoUpdates --DataFolder /config/Jackett
