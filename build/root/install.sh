@@ -19,7 +19,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 ####
 
 # define pacman packages
-pacman_packages="openssl-1.0"
+pacman_packages="openssl-1.0 icu"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
