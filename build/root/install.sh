@@ -15,9 +15,6 @@ unzip /tmp/scripts-master.zip -d /tmp
 # move shell scripts to /root
 mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 
-# run update to test for pkgbuild issue
-source upd.sh
-
 # pacman packages
 ####
 
@@ -36,7 +33,7 @@ fi
 aur_packages="jackett"
 
 # call aur install script (arch user repo)
-source aur.sh
+source aur3.sh
 
 # container perms
 ####
