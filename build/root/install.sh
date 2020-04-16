@@ -33,7 +33,7 @@ fi
 aur_packages="jackett"
 
 # call aur install script (arch user repo)
-source aur3.sh
+source aur.sh
 
 # container perms
 ####
