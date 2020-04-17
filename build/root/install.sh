@@ -18,6 +18,9 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 # pacman packages
 ####
 
+# call pacman db and package updater script
+source upd.sh
+
 # define pacman packages
 pacman_packages="openssl-1.0 icu"
 
