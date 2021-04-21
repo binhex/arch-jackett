@@ -42,6 +42,19 @@ if [[ ! -z "${pacman_packages}" ]]; then
 	pacman -S --needed $pacman_packages --noconfirm
 fi
 
+# delme - required to fix up cert issues when compiling .dot
+# custom
+####
+
+package_name="ca-certificates-mozilla.tar.zst"
+
+# download compiled libtorrent-ps (used by rtorrent-ps)
+rcurl.sh -o "/tmp/${package_name}" "https://github.com/binhex/arch-packages/raw/master/compiled/${OS_ARCH}/${package_name}"
+
+# install libtorrent-ps
+pacman -U "/tmp/${package_name}" --noconfirm
+# /delme - required to fix up cert issues when compiling .dot
+
 # aur packages
 ####
 
