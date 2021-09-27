@@ -87,8 +87,6 @@ jobs:
           git_clone_scripts_repo="https://github.com/binhex/scripts.git"
           container_port="9117"
 
-          mkdir -p '/tmp/config/Jackett'
-          echo '{ "urls": "http://0.0.0.0:9117" }' > '/tmp/config/Jackett/appsettings.json'
           git clone "${git_clone_scripts_repo}" "${git_clone_scripts_dest}"
           "${git_clone_scripts_dest}/shell/arch/docker/testrunner.sh" --image-name "ghcr.io/${{ github.repository }}:${{ steps.generate_temporary_tag_name.outputs.test_tag }}" --container-ports "-p 9999:${container_port}" --network-type 'bridge'
       - name: Push Docker image to Docker Hub
