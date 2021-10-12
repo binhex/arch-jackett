@@ -14,12 +14,15 @@ ADD build/root/*.sh /root/
 # add start bash script
 ADD run/nobody/*.sh /home/nobody/
 
+# get release tag name from build arg
+ARG release_tag_name
+
 # install app
 #############
 
 # make executable and run bash scripts to install app
 RUN chmod +x /root/*.sh && \
-	/bin/bash /root/install.sh
+	/bin/bash /root/install.sh "${release_tag_name}"
 
 # docker settings
 #################
