@@ -3,7 +3,10 @@
 # exit script if return code != 0
 set -e
 
-echo "args are '${@}'"
+# release tag name from build arg, stripped of build ver using string manipulation
+release_tag_name="${1//-[0-9][0-9]/}"
+
+echo "stripped tag '${release_tag_name}'"
 exit 1
 
 # build scripts
