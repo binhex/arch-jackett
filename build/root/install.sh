@@ -62,7 +62,7 @@ pacman -U "/tmp/${package_name}" --noconfirm
 ####
 
 # define aur packages
-aur_packages="jackett"
+aur_packages="jackett flaresolverr-bin"
 
 # call aur install script (arch user repo)
 source aur.sh
