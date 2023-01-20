@@ -38,7 +38,7 @@ fi
 ####
 
 # define pacman packages
-pacman_packages="openssl-1.0 icu"
+pacman_packages="openssl-1.1 icu"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
