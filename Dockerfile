@@ -15,7 +15,7 @@ ADD build/root/*.sh /root/
 ADD run/nobody/*.sh /home/nobody/
 
 # get release tag name from build arg
-arg RELEASETAG
+ARG RELEASETAG
 
 # install app
 #############
