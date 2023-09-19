@@ -42,7 +42,7 @@ fi
 package_name="ca-certificates-mozilla.tar.zst"
 
 # download compiled libtorrent-ps (used by rtorrent-ps)
-rcurl.sh -o "/tmp/${package_name}" "https://github.com/binhex/packages/raw/master/compiled/${OS_ARCH}/${package_name}"
+rcurl.sh -o "/tmp/${package_name}" "https://github.com/binhex/packages/raw/master/compiled/${TARGETARCH}/${package_name}"
 
 # install libtorrent-ps
 pacman -U "/tmp/${package_name}" --noconfirm
