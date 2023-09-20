@@ -2,6 +2,12 @@ FROM binhex/arch-base:latest
 LABEL org.opencontainers.image.authors = "binhex"
 LABEL org.opencontainers.image.source = "https://github.com/binhex/arch-jackett"
 
+# release tag name from buildx arg
+ARG RELEASETAG
+
+# arch from buildx --platform, e.g. amd64
+ARG TARGETARCH
+
 # additional files
 ##################
 
@@ -13,12 +19,6 @@ ADD build/root/*.sh /root/
 
 # add start bash script
 ADD run/nobody/*.sh /home/nobody/
-
-# release tag name from buildx arg
-ARG RELEASETAG
-
-# arch from buildx --platform, e.g. amd64
-ARG TARGETARCH
 
 # install app
 #############
