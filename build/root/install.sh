@@ -110,7 +110,7 @@ EOF
 sed -i '/# PERMISSIONS_PLACEHOLDER/{
     s/# PERMISSIONS_PLACEHOLDER//g
     r /tmp/permissions_heredoc
-}' /usr/local/bin/shell/docker/init.sh
+}' /usr/bin/init.sh
 rm /tmp/permissions_heredoc
 
 # prevent removal as orphan by marking as explicitly required
