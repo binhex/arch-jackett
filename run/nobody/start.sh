@@ -4,7 +4,7 @@
 source utils.sh
 
 # symlink jacket created definitions to config folder
-symlink --src-path '/usr/lib/jackett/Definitions' --dst-path '/config/Jackett/Definitions' --link-type 'softlink'
+symlink --src-path '/config/Jackett/Definitions' --dst-path '/usr/lib/jackett/Definitions' --link-type 'softlink'
 
 # run jackett using .net core
 /usr/lib/jackett/jackett --NoRestart --NoUpdates --DataFolder /config/Jackett
