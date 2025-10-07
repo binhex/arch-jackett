@@ -71,7 +71,7 @@ pacman -U "/tmp/${package_name}" --noconfirm
 aur_packages="jackett"
 
 # call aur install script (arch user repo)
-source aur.sh
+aur.sh --aur-package "${aur_packages}"
 
 # container perms
 ####
