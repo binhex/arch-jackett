@@ -55,7 +55,7 @@ fi
 ####
 
 # define aur packages
-aur_packages="jackett"
+aur_packages="jackett-bin"
 
 # call aur install script (arch user repo)
 aur.sh --aur-package "${aur_packages}"
