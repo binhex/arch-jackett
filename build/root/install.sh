@@ -40,7 +40,7 @@ refresh.sh
 ####
 
 # define pacman packages
-pacman_packages="openssl-1.1 icu"
+pacman_packages="icu"
 
 # install compiled packages using pacman
 if [[ -n "${pacman_packages}" ]]; then
